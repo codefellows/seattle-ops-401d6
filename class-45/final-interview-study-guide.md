@@ -1,0 +1,118 @@
+# Final Interview Study Guide
+
+The final interview may include both technical and behavioral question prompts. Brush up on your subject matter so that you can confidently and comprehensively answer the questions posed.
+
+## Areas to Study
+
+Spend some time reviewing the key concepts presented in the various domains we've covered to this point. The following list is NOT exhaustive, but to help guide your study in preparation for the technical interview. Topics may appear on the interview that do not appear here.
+
+- Fundamentals
+  - Linux terminal commands
+  - Windows terminal commands
+  - Troubleshooting
+  - Shells
+  - Scripts
+  - Virtualization
+  - Active Directory
+    - Kerberos
+- Automation
+  - Function
+  - Loop
+  - Conditional
+  - Library
+  - Python
+  - Powershell
+  - Bash
+  - Batch files
+- Computer networking
+  - Ports
+  - Protocols
+  - OSI Model
+  - Routers
+  - Firewalls
+  - Switches
+  - Subnets
+  - LANs, WANs, etc.
+  - DHCP
+  - DNS
+  - Domains
+  - Virtual Private Networking
+  - Network topology
+  - API
+  - Network access controls
+- Security Operations
+  - SIEM
+  - Log ingestion
+  - Sysmon
+  - Log analysis
+  - Structured vs unstructured data
+  - Incident response
+  - MITRE ATT&CK
+  - TTPs
+  - APTs
+- Data security
+  - Encryption
+    - At rest
+    - In transit
+  - Hashing
+  - PKI
+  - Keys
+  - TLS/SSL
+  - Certificates
+  - OS password storage
+- Cloud security
+  - CSPs
+  - Cloud types
+  - Cloud service delivery types
+  - AWS Shared Responsibility Model
+  - AWS EC2
+  - Amazon GuardDuty
+  - VPC
+  - CloudWatch
+  - VPC Flow Logs
+  - AWS Lambda
+- Web application security
+  - OWASP Top 10
+  - Spider/crawler
+  - Cookies
+  - Session hijack
+  - HTTP request-response cycle
+  - HTTP error codes
+  - HTTP request types
+  - Proxy
+- Governance, Risk, and Compliance
+  - CIA triad
+  - Risk analysis
+    - Qualitative
+    - Quantitative
+  - Policies
+  - Procedures
+  - Reporting
+  - Compliance
+    - PCI, HIPAA, etc.
+  - Auditing
+- Threat Modeling and Analysis
+  - Cyber kill chain
+  - DFD
+    - Trust boundary
+  - Purpose of threat modeling
+  - When to threat model
+- Threat hunting
+  - Hunt cycle
+  - Pyramid of pain
+  - Beacons
+  - Strobes
+  - C2 communications techniques
+  - Digital forensics
+    - Tools
+    - Practices
+  - Packet capture and analysis
+- Penetration Testing
+  - Pentest stages
+  - Intelligence gathering tools and methods
+    - Banner grabbing
+  - Vulnerabilities
+  - Exploits
+    - Metasploit
+    - Powershell Empire
+    - DoS, DDoS
