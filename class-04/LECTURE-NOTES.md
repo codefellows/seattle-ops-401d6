@@ -79,4 +79,4 @@
     - Enable AWS Config
     - Enable AWS Security Hub
   - CIS standards are listed by OS
-  - Ref. [DEMO.md](DEMO.md)
+

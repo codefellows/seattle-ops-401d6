@@ -12,8 +12,8 @@
 
 Don't look at the interview questions until you decide who will be the first interviewer.
 
-- The first interviewer will ask [this question](interview-01.md){:target="_blank"}.
-- The second interviewer will ask [this question](interview-02.md){:target="_blank"}.
+- The first interviewer will ask [this question](https://codefellows.github.io/ops-401-cybersecurity-guide/curriculum/class-04/challenges/interview-01.html){:target="_blank"}.
+- The second interviewer will ask [this question](https://codefellows.github.io/ops-401-cybersecurity-guide/curriculum/class-04/challenges/interview-02.html){:target="_blank"}.
 
 ## Interviewer Guidelines
 
