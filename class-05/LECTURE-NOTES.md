@@ -1,5 +1,9 @@
 # Lecture Notes: Career Development Workshop 1
 
+## Sec+ Guide Alignment:
+
+- Chapter 7: Cryptography and the Public Key Infrastructure
+
 ### Key Terms
 
 - **Encryption**

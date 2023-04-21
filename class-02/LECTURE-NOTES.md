@@ -1,5 +1,10 @@
 # Lecture Notes: Cloud Security Principles and Frameworks
 
+## Sec+ Guide Alignment:
+
+- Chapter 10: Cloud and Virtualization Security
+- Chapter 16: Security Policies, Standards, and Compliance
+
 ## ISO and Cloud Frameworks
 
 - **Why** (5 min)

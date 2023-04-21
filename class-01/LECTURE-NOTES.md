@@ -1,7 +1,11 @@
 # Lecture Notes: Strategic Policy Development
 
+## Sec+ Guide Alignment:
 
-## Topic 2:
+- Chapter 1: Today's Security Professional
+- Chapter 16: Security Policies, Standards, and Compliance
+
+## Topics:
 
 **Why**
 

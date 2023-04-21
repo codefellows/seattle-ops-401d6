@@ -1,5 +1,10 @@
 # Lecture Notes: Cyber Risk Analysis
 
+## Sec+ Guide Alignment:
+
+- Chapter 16: Security Policies, Standards, and Compliance
+- Chapter 17: Risk Management and Privacy
+
 ## Lecture Outline
 
 - **Why** (5 min)

@@ -1,5 +1,10 @@
 # Lecture Notes: Systems Hardening with CIS Standards
 
+## Sec+ Guide Alignment:
+
+- Chapter 11: Endpoint Security
+- Chapter 10: Cloud and Virtualization Security
+
 ## Lecture: CIS Hardening in the cloud
 
 - **Why** (5 min)
@@ -54,7 +59,7 @@
       - OS
       - Root device storage
       - Architecture
-  
+
 - What is AMI hardening and why is it important?
   - **AMI hardening** involves configuring AMIs to prioritize security over mere convenience
 - What are prehardened CIS AMIs?
