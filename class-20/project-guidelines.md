@@ -36,7 +36,7 @@ Your team will practice your presentation prior to the final presentation day. T
 Practice and prepare your technical demonstrations in advance of demo day to rule out any quirks/bugs.
 
 General slide deck guidelines:
-- The presentation slides must use the aesthetic formatting of the [template slide deck](https://docs.google.com/presentation/d/16LOH5KiIVGq3oJReWa2kVO_VgQZlYG9K4vNXJuJNJdE).
+- The presentation slides must use the aesthetic formatting of the [template slide deck](https://docs.google.com/presentation/d/1iv8uB6H0P49RN9IF6cYA5lpfiuL4WBGQqcbEu6Q4JAA/edit#slide=id.g2accd1c413_1_55).
   - Remember to create your own copy of the template and do not edit the template itself.
 - Ensure your timing is no more than 25 minutes long, including some time at the end for questions.
 - Present from the final product, deployed site, or official documentation that you produce.
@@ -44,6 +44,26 @@ General slide deck guidelines:
   - The "About Us" page provides a great backdrop for this portion of the presentation.
 
 Each member of the team must have a speaking part. It is okay to use presenter notes/outlines but remember to avoid reading notes verbatim and to present naturally as if speaking to a colleague.
+
+The appropriate dress code is business casual - not too formal and not too casual.
+
+Be cognizant of the environment you're presenting from. A clean backdrop, good lighting, and quality mic and webcam go a long ways.
+
+In addition to the scheduled practice session, the team is encouraged to continue to practice on their own. Keep track of the time and adjust accordingly. Practice transitioning speaking segments.
+
+Speak clearly and do not use slang or profanity. Take it seriously and be professional.
+
+> Tip: Slides should be composed of talking points, not lines to be read verbatim! Avoid the "teleprompter" effect and aim for a natural, extemporaneous presentation on demo day.
+
+## Grading
+
+Each team member's grade is split between their individual effort, and the project's technical merit.
+
+Individual effort is graded based on contributions to project deliverables, and professionalism in the presentation.
+
+Technical merit of the project overall is evaluated according the requirements. The Project Grade is a combination of the Presentation (55%) and the Deliverables (45%)
+
+### Presentation (55%)
 
 Components of the presentation must include:
 
@@ -62,31 +82,60 @@ Components of the presentation must include:
     - D1c. A portion of the outcome you are particularly proud of achieving
 - E. Q&A (5 min)
 
-The appropriate dress code is business casual - not too formal and not too casual.
+### Deliverables (45%)
 
-Be cognizant of the environment you're presenting from. A clean backdrop, good lighting, and quality mic and webcam go a long ways.
+Submit to instructor a single link to your Github Org. All team members are to contribute an equal share to documentation corresponding to the components they worked on and should clearly indicate which components each contributed to in their individual project submission notes.
 
-In addition to the scheduled practice session, the team is encouraged to continue to practice on their own. Keep track of the time and adjust accordingly. Practice transitioning speaking segments.
+- GitHub Repository (10%)
+  - A repo under an appropriately name Github "Organization"
+  - Sufficient documentation in the top level README to explain to a stranger who you are, what this project was about, and how all of the material in the repo pertains to it.
+    - This README should be:
+      - Attractively formatted
+      - Include links to relevant files in the repo
+      - Include links to each of your own Github accounts AND LinkedIn accounts
+  - All other deliverables should be included as files in this repo
+- Presentation Material (5%)
+  - Slide deck, as a PDF
+  - A link to the video of your presentation (when it becomes available)
+- Network design (20%)
+  - A network topology diagram of your systems architecture design, including AWS tools and services
+  - All components must be labeled, and network diagram must be presentable (straight lines) and free of defects/typographical issues. Take your time to create a quality network diagram; do not rush!
+  - Clearly indicate AWS instances, networks, tools and services.
+  - A clear, written explanation and justification your cloud architecture design.
+  - Include a table or chart of network infrastructure and configuration details (yes, this will overlap with your topology -- you must document your network in both ways):
+    - Subnets and their uses
+    - Include Subnet Masks, CIDR addresses, etc.
+    - Security Group rules
+SOP and Policy Documentation (10%)
+  -
 
-Speak clearly and do not use slang or profanity. Take it seriously and be professional.
+## AWS IAM
 
-> Tip: Slides should be composed of talking points, not lines to be read verbatim! Avoid the "teleprompter" effect and aim for a natural, extemporaneous presentation on demo day.
+- Proper IAM for all team members must be implemented using AWS best practices
 
-## Grading
+## Server Hardening and Data Protection
 
-Each team member's grade is split between their individual effort, and the project's technical merit.
+- CIS-compliant Windows Server DC hosted on a private subnet of a VPC and accessible only via VPN tunneling
+  - Data needs to be encrypted at rest and encrypted in transit
+  - Deploy Sysmon to generate security-relevant system logs
 
-Individual effort is graded based on contributions to project deliverables, and professionalism in the presentation.
+- CIS-compliant Data Server
+  - Linux server instance containing PII and PCI data
+  - Data needs to be encrypted at rest and in transit
 
-Technical merit of the project overall is evaluated according the requirements.
+## SIEM / Log aggregation system
 
-### Deliverables
+- Splunk, CloudWatch, Elastic Stack
+  - Configured to ingest event logs in real time from key assets including EC2 instances
+- Show an attack TTP, attack must incorporate a Python script using a new library you have not worked with yet.
+- The attack should trigger an event that gets ingested by the SIEM solution
 
-Submit to instructor a single "Project Report" Google Doc. All team members are to contribute an equal share to documentation corresponding to the components they worked on and should clearly indicate which components each contributed to in their individual project submission notes.
+## Cloud Monitoring
 
-Teams are encouraged to adopt an Agile mindset with regards to the development of their project deliverables and regularly solicit feedback from staff regarding their project report, slide deck, and other deliverables. The quality of your reporting will be evaluated and will directly impact the group submission grade. Remember to budget adequate time and attention for project deliverables to ensure a high quality of work is delivered. The client point of contact should be contacted via email regarding scenario-specific scoping.
-
-Here is a list of requirements your manager would like to see addressed in your final project report:
+- Capture traffic for the client to demonstrate how the attack TTPs would be detected in the AWS Cloud using VPC Flow Logs and any additional automation necessary
+- An AWS Lambda function triggering a relevant response to a detected threat (this fulfills the requirement for a shell script)
+- Monitor for APT threat activity in your AWS environment
+- Monitor Security Logs for failed SSH attempts on your instances
 
 - Preparation
   - Obtain the Network Security Assessment from your instructor and analyze the findings.
@@ -120,14 +169,6 @@ Reference the below resources for developing your security assessment report.
 - [CMS Security Assessment Report Template](https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Downloads/Security-Assessment-Report-Template.docx)
 - [Security Assessment Report Example](https://www.silabs.com/documents/public/white-papers/SP02508-Sigma-Designs-Security2-Command-Class_v2_Commercial_in_Confidence_Removed.pdf)
 
-Reference the below resources for developing your STRIDE/DREAD analysis.
-
-- [Qualitative Risk Analysis with the DREAD Model](https://resources.infosecinstitute.com/qualitative-risk-analysis-dread-model/)
-- [STRIDE/DREAD Analysis: Threat Modeling of Trinity Wallet Example](https://files.iota.org/trinity/Threat+Modelling+Report+V1.2.signed.pdf)
-
-Reference the below resources for developing your threat model technical report.
-
-- [Enterprise Threat Model Technical Report Example](https://www.mitre.org/sites/default/files/publications/pr_18-1613-ngci-enterprise-threat-model-technical-report.pdf)
 
 Reference the below resources for developing your NOC/SOC SOP.
 
