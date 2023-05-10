@@ -7,6 +7,7 @@ Your team has been contracted to improve the cybersecurity processes and systems
 ## Assignments & Deliverables
 
 Keep an eye on Canvas for assignments due this week.
+
 - Remember to complete nightly Project Report assignments. These assignments are easy to forget as you get swept up in interesting project subject matter.
 - Necessities such as team agreement (conflict resolution, etc.) and project plan will be created in your Project Prep assignments. Instructor approval is required before progressing to the next Project Prep assignment.
 - By demo day, you'll need these deliverables assembled:
@@ -36,6 +37,7 @@ Your team will practice your presentation prior to the final presentation day. T
 Practice and prepare your technical demonstrations in advance of demo day to rule out any quirks/bugs.
 
 General slide deck guidelines:
+
 - The presentation slides must use the aesthetic formatting of the [template slide deck](https://docs.google.com/presentation/d/1iv8uB6H0P49RN9IF6cYA5lpfiuL4WBGQqcbEu6Q4JAA/edit#slide=id.g2accd1c413_1_55).
   - Remember to create your own copy of the template and do not edit the template itself.
 - Ensure your timing is no more than 25 minutes long, including some time at the end for questions.
@@ -73,7 +75,7 @@ Components of the presentation must include:
     - B1a. Compliance requirements
     - B1b. Security systems requirements
 - C. Technical demonstrations of solutions (12 min)
-  - C1. Introduce the network topology of your environment
+  - C1. Introduce the cloud architecture diagram of your environment
   - C2. Demonstrate your solution(s) to the problem domain here
 - D. Final thoughts on how the project went (3 min)
   - D1. Each team member should share some final thoughts on the project. Some topics you could discuss here include:
@@ -94,23 +96,35 @@ Submit to instructor a single link to your Github Org. All team members are to c
       - Include links to relevant files in the repo
       - Include links to each of your own Github accounts AND LinkedIn accounts
   - All other deliverables should be included as files in this repo
+  - Deployment scripts: Scripts used to automate the deployment process of the project, which includes provisioning the required AWS resources, deploying the code, and configuring the services.
 - Presentation Material (5%)
   - Slide deck, as a PDF
   - A link to the video of your presentation (when it becomes available)
-- Network design (20%)
-  - A network topology diagram of your systems architecture design, including AWS tools and services
-  - All components must be labeled, and network diagram must be presentable (straight lines) and free of defects/typographical issues. Take your time to create a quality network diagram; do not rush!
+- Cloud Architecture design (20%)
+  - AWS infrastructure components, their interactions, and how they fit together.
+    - This diagram should be comprehensive and understandable to all stakeholders involved in the project.
+  - All components must be labeled, and diagram must be presentable (straight lines) and free of defects/typographical issues. Take your time to create a quality diagram; do not rush!
   - Clearly indicate AWS instances, networks, tools and services.
-  - A clear, written explanation and justification your cloud architecture design.
+  - A clear, written explanation and justification of your cloud architecture design.
+  - Add descriptions of how you incorporated these systems into your technical demo:
+    - AWS IAM
+    - AWS CloudTrail
+    - Amazon GuardDuty
   - Include a table or chart of network infrastructure and configuration details (yes, this will overlap with your topology -- you must document your network in both ways):
     - Subnets and their uses
     - Include Subnet Masks, CIDR addresses, etc.
     - Security Group rules
-SOP and Policy Documentation (10%)
-  -
+- SOP and Policy Documentation (10%)
+  - Security Incident Plan
+    - The test plan should include detailed testing procedures of security controls and monitoring solutions along with expected outcomes.
+    - Include a diagram of the expected events when an attack triggers your monitoring tools.
+  - Compliance Documentation
+    - Compliance documentation should be developed to demonstrate that the system meets any relevant regulatory requirements.
+    - This may include documentation showing compliance with PCI, GDPR, or other industry-specific regulations. (Pick one compliance framework)
 
 ## AWS IAM
 
+- Proper IAM best practices must be implemented for the root account
 - Proper IAM for all team members must be implemented using AWS best practices
 
 ## Server Hardening and Data Protection
@@ -134,8 +148,9 @@ SOP and Policy Documentation (10%)
 
 - Capture traffic for the client to demonstrate how the attack TTPs would be detected in the AWS Cloud using VPC Flow Logs and any additional automation necessary
 - An AWS Lambda function triggering a relevant response to a detected threat (this fulfills the requirement for a shell script)
-- Monitor for APT threat activity in your AWS environment
+- Monitor for threat activity in your AWS environment
 - Monitor Security Logs for failed SSH attempts on your instances
+
 
 - Preparation
   - Obtain the Network Security Assessment from your instructor and analyze the findings.
@@ -152,25 +167,12 @@ SOP and Policy Documentation (10%)
 - PD05: Security Architecture Narrative
   - Using the Class 01 template file, create a security architecture narrative for your client.
   - Create and include a cloud topology of your environment using a tool such as draw.io. Keep in mind that a cloud topology differs from a traditional LAN, so use the correct icons and structure appropriate to what you're depicting.
-  - Add descriptions of how you incorporated these systems into your technical demo:
-    - AWS IAM
-    - AWS CloudTrail
-    - Amazon GuardDuty
+  
   - Exclude the Physical Security section.
-  - Explain how CIS benchmarks were incorporated into your Windows deployment(s) in the cloud. Validate CIS compliance using AWS Security Hub.
+
     - Explain how FDE was used to secure hard drives on your systems.
     - Explain how PKI was used in your cloud environment.
 
-### Resources
+## Resources
 
-Reference the below resources for developing your security assessment report.
-
-- [Tips for Creating a Strong Cybersecurity Assessment Report](https://zeltser.com/security-assessment-report-cheat-sheet/)
-- [CMS Security Assessment Report Template](https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Downloads/Security-Assessment-Report-Template.docx)
-- [Security Assessment Report Example](https://www.silabs.com/documents/public/white-papers/SP02508-Sigma-Designs-Security2-Command-Class_v2_Commercial_in_Confidence_Removed.pdf)
-
-
-Reference the below resources for developing your NOC/SOC SOP.
-
-- [Guideline to Develop and Maintain the Security Operation Center (SOC)](https://resources.infosecinstitute.com/guideline-to-develop-and-maintain-the-security-operation-center-soc/)
-- [NIST Risk Management Framework Overview](https://www.nist.gov/system/files/documents/2018/03/28/vickie_nist_risk_management_framework_overview-hpc.pdf)
+- Use [Stratus Red Team](https://github.com/DataDog/stratus-red-team) for threat emulation
