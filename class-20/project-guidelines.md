@@ -2,7 +2,38 @@
 
 ## Scenario & Problem Domain
 
-Your team has been contracted to improve the cybersecurity processes and systems for a client company.
+Your team has been contracted to improve the cybersecurity processes and systems for a client company, focusing on logging, monitoring and detection of adversarial activity on cloud infrastructure.
+
+## Project Requirements
+
+For this project, your client has requested a demonstration of how you'll be able to protect their cloud infrastructure. You'll need to implement the following in AWS Cloud to demonstrate how you'll secure the AWS environment:
+
+- **IAM**
+  - Proper IAM best practices must be implemented for the root account
+  - Proper IAM for all team members must be implemented using AWS best practices
+
+- **Server Hardening and Data Protection**
+  - CIS-compliant Windows Server DC hosted on a private subnet of a VPC and accessible only via VPN tunneling
+    - Data needs to be encrypted at rest and encrypted in transit
+    - Deploy Sysmon to generate security-relevant system logs
+  - CIS-compliant Data Server
+    - Linux server instance containing PII and PCI data
+    - Data needs to be encrypted at rest and in transit
+
+- **SIEM / Log aggregation system**
+  - Splunk, CloudWatch, Elastic Stack
+  - Configured to ingest event logs in real time from key assets including EC2 instances
+  - Show an attack TTP, attack must incorporate a Python script using a new library you have not worked with yet.
+  - The attack should trigger an event that gets ingested by the SIEM solution
+
+- **Cloud Monitoring**
+  - Capture traffic for the client to demonstrate how the attack TTPs would be detected in the AWS Cloud using VPC Flow Logs and any additional automation necessary
+  - An AWS Lambda function triggering a relevant response to a detected threat (this fulfills the requirement for a shell script)
+  - Monitor for threat activity in your AWS environment
+  - Monitor Security Logs for failed SSH attempts on your instances
+
+- **Novelty**
+  - Challenge yourselves to implement a novel tool, system, or technique that was not demonstrated or performed during lab time in term 1 of your Ops 401 class.
 
 ## Assignments & Deliverables
 
@@ -88,7 +119,7 @@ Components of the presentation must include:
 
 Submit to instructor a single link to your Github Org. All team members are to contribute an equal share to documentation corresponding to the components they worked on and should clearly indicate which components each contributed to in their individual project submission notes.
 
-- GitHub Repository (10%)
+- **GitHub Repository (10%)**
   - A repo under an appropriately name Github "Organization"
   - Sufficient documentation in the top level README to explain to a stranger who you are, what this project was about, and how all of the material in the repo pertains to it.
     - This README should be:
@@ -97,10 +128,10 @@ Submit to instructor a single link to your Github Org. All team members are to c
       - Include links to each of your own Github accounts AND LinkedIn accounts
   - All other deliverables should be included as files in this repo
   - Deployment scripts: Scripts used to automate the deployment process of the project, which includes provisioning the required AWS resources, deploying the code, and configuring the services.
-- Presentation Material (5%)
+- **Presentation Material (5%)**
   - Slide deck, as a PDF
   - A link to the video of your presentation (when it becomes available)
-- Cloud Architecture design (20%)
+- **Cloud Architecture design (20%)**
   - AWS infrastructure components, their interactions, and how they fit together.
     - This diagram should be comprehensive and understandable to all stakeholders involved in the project.
   - All components must be labeled, and diagram must be presentable (straight lines) and free of defects/typographical issues. Take your time to create a quality diagram; do not rush!
@@ -114,64 +145,13 @@ Submit to instructor a single link to your Github Org. All team members are to c
     - Subnets and their uses
     - Include Subnet Masks, CIDR addresses, etc.
     - Security Group rules
-- SOP and Policy Documentation (10%)
+- **SOP and Policy Documentation (10%)**
   - Security Incident Plan
     - The test plan should include detailed testing procedures of security controls and monitoring solutions along with expected outcomes.
     - Include a diagram of the expected events when an attack triggers your monitoring tools.
   - Compliance Documentation
     - Compliance documentation should be developed to demonstrate that the system meets any relevant regulatory requirements.
     - This may include documentation showing compliance with PCI, GDPR, or other industry-specific regulations. (Pick one compliance framework)
-
-## AWS IAM
-
-- Proper IAM best practices must be implemented for the root account
-- Proper IAM for all team members must be implemented using AWS best practices
-
-## Server Hardening and Data Protection
-
-- CIS-compliant Windows Server DC hosted on a private subnet of a VPC and accessible only via VPN tunneling
-  - Data needs to be encrypted at rest and encrypted in transit
-  - Deploy Sysmon to generate security-relevant system logs
-
-- CIS-compliant Data Server
-  - Linux server instance containing PII and PCI data
-  - Data needs to be encrypted at rest and in transit
-
-## SIEM / Log aggregation system
-
-- Splunk, CloudWatch, Elastic Stack
-  - Configured to ingest event logs in real time from key assets including EC2 instances
-- Show an attack TTP, attack must incorporate a Python script using a new library you have not worked with yet.
-- The attack should trigger an event that gets ingested by the SIEM solution
-
-## Cloud Monitoring
-
-- Capture traffic for the client to demonstrate how the attack TTPs would be detected in the AWS Cloud using VPC Flow Logs and any additional automation necessary
-- An AWS Lambda function triggering a relevant response to a detected threat (this fulfills the requirement for a shell script)
-- Monitor for threat activity in your AWS environment
-- Monitor Security Logs for failed SSH attempts on your instances
-
-
-- Preparation
-  - Obtain the Network Security Assessment from your instructor and analyze the findings.
-- PD01: Risk Assessment Worksheet
-  - Complete a risk assessment worksheet for your client company, addressing threats to the company's operations and what level of risk they each present.
-- PD02: Security Assessment Report (SAR)
-  - Using the [SAR template file](https://www.icloud.com/iclouddrive/0mLh-le4fAPK-j24pJTmYzOsg#sar-template-v2), complete a SAR.
-  - Include and discuss the findings of your risk assessment worksheet.
-- PD03: Data Security Policy
-  - Using the [data security policy template](https://www.icloud.com/iclouddrive/02ASEYZEy9ynPM3ph6Zw8YoJg#Data_Security_Policy_Template), complete a data security policy that addresses data security concerns such as encryption and DLP practices.
-  - Mention any relevant systems you've implemented.
-- PD04: Cloud Security Policy
-  - Using the Class 02 template file, create a cloud security policy for your client.
-- PD05: Security Architecture Narrative
-  - Using the Class 01 template file, create a security architecture narrative for your client.
-  - Create and include a cloud topology of your environment using a tool such as draw.io. Keep in mind that a cloud topology differs from a traditional LAN, so use the correct icons and structure appropriate to what you're depicting.
-  
-  - Exclude the Physical Security section.
-
-    - Explain how FDE was used to secure hard drives on your systems.
-    - Explain how PKI was used in your cloud environment.
 
 ## Resources
 
