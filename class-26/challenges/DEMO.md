@@ -74,3 +74,4 @@ logger.warning("Its a Warning")
 logger.error("Did you try to divide by zero")
 logger.critical("Internet is down")
 ```
+
